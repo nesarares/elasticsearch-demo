@@ -15,3 +15,7 @@ npm run insert-data
 ```sh
 npm start
 ```
+
+## Credits
+
+Review data taken from yelp dataset challenge 2020. [https://www.yelp.com/dataset](https://www.yelp.com/dataset)
