@@ -19,7 +19,11 @@ async function main() {
   });
   const { body: bulkResponse } = await esClient.bulk({ refresh: true, body });
 
-  console.log(bulkResponse);
+  if (bulkResponse.errors) {
+    console.error(bulkResponse);
+  } else {
+    console.log(`Inserted ${bulkResponse.items.length} items.`);
+  }
 }
 
 main().catch(console.error);
