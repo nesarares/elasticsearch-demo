@@ -15,7 +15,7 @@ export class ReviewsService {
   constructor() {
     this.api = axios.create({
       baseURL: "/api/reviews",
-      timeout: 1000,
+      timeout: 10000,
       headers: {
         "Content-Type": "application/json",
         Authorization: `ApiKey ${btoa(keyId + ":" + apiKey)}`,
